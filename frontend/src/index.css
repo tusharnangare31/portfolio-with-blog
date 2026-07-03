@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme: White/Orange */
+  --background: 0 0% 98%;
+  --foreground: 0 0% 1%;
+  --foreground-rgb: 2, 2, 2;
+  --surface: 0 0% 100%;
+  --muted: 0 0% 25%;
+  --accent: 25 95% 53%;
+  --accent-rgb: 249, 115, 22;
+  --accent-dark: 20 88% 40%;
+  --accent-light: 33 100% 94%;
+  --accent-foreground: 0 0% 1%;
+}
+
+.dark {
+  /* Dark Theme: Black/Emerald */
+  --background: 0 0% 3%;
+  --foreground: 0 0% 100%;
+  --foreground-rgb: 255, 255, 255;
+  --surface: 0 0% 7%;
+  --muted: 0 0% 64%;
+  --accent: 160 84% 39%;
+  --accent-rgb: 16, 185, 129;
+  --accent-dark: 164 86% 16%;
+  --accent-light: 186 100% 94%;
+  --accent-foreground: 0 0% 3%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  * {
+    border-color: rgba(var(--foreground-rgb), 0.1);
+    cursor: none !important;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--foreground-rgb), 0.1);
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(var(--foreground-rgb), 0.2);
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(var(--accent-rgb), 0.4);
+  }
+  
+  .glass {
+    background-color: rgba(var(--foreground-rgb), 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(var(--foreground-rgb), 0.1);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground/80 to-accent;
+  }
+  
+  .font-cursive {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ============================================================
+   Blog Content Typography Styles
+   Applied to the .blog-content wrapper around rendered markdown.
+   ============================================================ */
+@layer components {
+  /* ── Headings ── */
+  .blog-content h1 {
+    @apply text-3xl md:text-4xl font-display font-bold mt-12 mb-6 text-foreground;
+  }
+
+  .blog-content h2 {
+    @apply text-2xl md:text-3xl font-display font-semibold mt-10 mb-4 text-accent;
+  }
+
+  .blog-content h3 {
+    @apply text-xl md:text-2xl font-display font-medium mt-8 mb-3 text-foreground;
+  }
+
+  /* ── Body Text ── */
+  .blog-content p {
+    @apply text-base md:text-lg leading-relaxed text-foreground/80 mb-6;
+  }
+
+  /* ── Lists ── */
+  .blog-content ul {
+    @apply list-disc list-outside space-y-2 mb-6 text-foreground/80 ml-6;
+  }
+
+  .blog-content ol {
+    @apply list-decimal list-outside space-y-2 mb-6 text-foreground/80 ml-6;
+  }
+
+  .blog-content li {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  /* Fix for BlockNote wrapping list text in <p> which causes bullets to break lines */
+  .blog-content li > p {
+    @apply inline m-0;
+  }
+
+  .blog-content li > ul,
+  .blog-content li > ol {
+    @apply mt-2 ml-4;
+  }
+
+  /* ── Blockquote ── */
+  .blog-content blockquote {
+    @apply border-l-4 border-accent pl-6 py-3 my-6 italic
+           bg-accent/5 rounded-r-2xl text-foreground/70;
+  }
+
+  .blog-content blockquote p {
+    @apply mb-0;
+  }
+
+  /* ── Inline Code ── */
+  .blog-content code:not(pre code),
+  .blog-inline-code {
+    @apply bg-foreground/10 text-accent px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  /* ── Code Blocks ── */
+  .blog-content pre {
+    @apply bg-surface border border-foreground/5 rounded-2xl p-6 overflow-x-auto mb-6 mt-4;
+  }
+
+  .blog-content pre code {
+    @apply bg-transparent text-foreground/90 p-0 text-sm leading-relaxed font-mono;
+  }
+
+  /* ── Tables ── */
+  .blog-content table {
+    @apply w-full mb-6 text-left border-collapse;
+  }
+
+  .blog-content thead th {
+    @apply bg-accent/10 text-accent font-display font-semibold
+           px-4 py-3 text-sm uppercase tracking-wider
+           border-b-2 border-accent/20;
+  }
+
+  .blog-content tbody td {
+    @apply px-4 py-3 text-foreground/80 text-sm border-b border-foreground/5;
+  }
+
+  .blog-content tbody tr:hover {
+    @apply bg-foreground/[0.02];
+  }
+
+  /* ── Strong & Emphasis ── */
+  .blog-content strong {
+    @apply font-semibold text-foreground;
+  }
+
+  .blog-content em {
+    @apply italic text-foreground/70;
+  }
+
+  /* ── Horizontal Rule ── */
+  .blog-content hr {
+    @apply my-10 border-0 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent;
+  }
+
+  /* ── Images ── */
+  .blog-content img {
+    @apply rounded-2xl my-8 w-full border border-foreground/5;
+  }
+
+  /* ── Links (fallback for non-component rendered) ── */
+  .blog-content a {
+    @apply text-accent hover:text-accent/80 underline underline-offset-4 transition-colors duration-200;
+  }
+}

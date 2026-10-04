@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function SEO({
-  title = 'Tushar Nangare | DevOps Engineer Portfolio',
-  description = 'Aspiring DevOps Engineer specializing in Linux, Docker, AWS, Kubernetes, and CI/CD.',
+  title = 'Tushar Nangare | Python Full Stack Developer Portfolio',
+  description = 'Information Technology graduate building and shipping full-stack applications end to end — React/React Native, Next.js, Python, Supabase, PostgreSQL, Docker, and AWS.',
   url = 'https://tusharnangare.netlify.app/',
   image,
   type = 'website',

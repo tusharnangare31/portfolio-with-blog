@@ -3,19 +3,19 @@ import { motion, useScroll, useSpring, useTransform, AnimatePresence } from "fra
 import { projects } from "../../data/portfolio";
 import { Folder, GitBranch, ChevronRight, MousePointer2, Github } from "lucide-react";
 
-const projectOrder = ["Cloud & DevOps", "AI & Machine Learning", "Web Development"];
+const projectOrder = ["Full Stack & Mobile", "Cloud & DevOps"];
 
 const SECTIONS = projectOrder.map((category, i) => {
-  const items = projects[category];
+  const items = projects[category] || [];
   return {
-    id: category.toLowerCase().replace(/\s+/g, '-'),
+    id: category.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
     num: (i + 1).toString().padStart(2, '0'),
     label: category.toUpperCase(),
     title: category.split(' ')[0],
     titleAccent: category.split(' ').slice(1).join(' '),
-    sub: i === 0 ? "Scalable infrastructure · Automated deployment" :
-      i === 1 ? "Deep learning · Medical insights" :
-        "Full-stack platforms · Interactive interfaces",
+    sub: i === 0
+      ? "React Native · Next.js · Supabase · PostgreSQL"
+      : "Docker · Kubernetes · CI/CD · AWS Cloud Infrastructure",
     projects: items
   };
 });

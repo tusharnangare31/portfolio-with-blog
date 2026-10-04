@@ -6,9 +6,9 @@ const ResumeModal = ({ isOpen, onClose }) => {
   const [selectedIdx, setSelectedIdx] = useState(null);
 
   const resumeOptions = [
-    { label: "DevOps Engineer", file: "/Resume(1).pdf" },
-    { label: "Cloud Engineer", file: "/Resume(2).pdf" },
-    { label: "Full Stack Developer", file: "/Resume(3).pdf" }
+    { label: "Python Full Stack", file: "/Resume(3).pdf" },
+    { label: "Full Stack Developer", file: "/Resume(2).pdf" },
+    { label: "Cloud & DevOps", file: "/Resume(1).pdf" }
   ];
 
   const handleCardClick = (e, i) => {

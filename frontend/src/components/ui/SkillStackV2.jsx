@@ -1,76 +1,79 @@
 import { useState, useEffect, useRef } from 'react';
 import { 
-  Clock, 
-  Layout, 
   Brain, 
   Layers, 
-  Link as LinkIcon, 
-  BarChart3, 
+  Smartphone,
   Database, 
-  Network, 
-  Activity 
+  Activity, 
+  Cloud,
+  Terminal,
+  Cpu,
+  Boxes,
+  Layout
 } from 'lucide-react';
 
 const SKILLS_DATA = [
   {
     id: 1,
-    title: "System Design",
-    tech: "TypeScript",
-    icon: "architecture"
+    title: "Python Full Stack",
+    tech: "Python, OOP & APIs",
+    icon: "terminal"
   },
   {
     id: 2,
-    title: "DSA",
-    tech: "Python",
-    icon: "brain"
-  },
-  {
-    id: 3,
-    title: "Full Stack",
-    tech: "MERN",
+    title: "Front-End",
+    tech: "React, Next.js, Tailwind",
     icon: "layers"
   },
   {
+    id: 3,
+    title: "Mobile Platform",
+    tech: "React Native & TypeScript",
+    icon: "smartphone"
+  },
+  {
     id: 4,
-    title: "LangChain",
-    tech: "Jupyter",
-    icon: "link"
-  },
-  {
-    id: 5,
-    title: "Tableau",
-    tech: "Visualization",
-    icon: "bar-chart"
-  },
-  {
-    id: 6,
-    title: "Pandas",
-    tech: "Python",
+    title: "Databases & Auth",
+    tech: "Supabase & PostgreSQL",
     icon: "database"
   },
   {
+    id: 5,
+    title: "Containers & CI/CD",
+    tech: "Docker & GitHub Actions",
+    icon: "boxes"
+  },
+  {
+    id: 6,
+    title: "Cloud Infrastructure",
+    tech: "AWS (EC2, ECS, ALB, WAF)",
+    icon: "cloud"
+  },
+  {
     id: 7,
-    title: "LangGraph",
-    tech: "Jupyter",
-    icon: "network"
+    title: "IaC & Automation",
+    tech: "Terraform & Ansible",
+    icon: "cpu"
   },
   {
     id: 8,
-    title: "Kafka",
-    tech: "Streaming",
-    icon: "activity"
+    title: "Data Structures & Algo",
+    tech: "Active LeetCode Solver",
+    icon: "brain"
   }
 ];
 
 const IconMap = {
-  "architecture": Layout,
-  "brain": Brain,
+  "terminal": Terminal,
   "layers": Layers,
-  "link": LinkIcon,
-  "bar-chart": BarChart3,
+  "smartphone": Smartphone,
   "database": Database,
-  "network": Network,
-  "activity": Activity
+  "boxes": Boxes,
+  "cloud": Cloud,
+  "cpu": Cpu,
+  "brain": Brain,
+  "activity": Activity,
+  "architecture": Layout
 };
 
 const CARD_HEIGHT = 85; // Increased from 70

@@ -4,7 +4,7 @@ import { projects } from '../../data/portfolio';
 import { ArrowRight, Layers, Hand } from 'lucide-react';
 
 export default function MobileShowcase({ onOpenModal }) {
-  const displayOrder = ["Data Visualization", "Web Development", "Machine Learning"];
+  const displayOrder = ["Full Stack & Mobile", "Cloud & DevOps"];
   
   // Initialize with all projects in the correct order
   const [cards, setCards] = useState(() => 
@@ -12,7 +12,7 @@ export default function MobileShowcase({ onOpenModal }) {
       .map(cat => projects[cat])
       .filter(Boolean)
       .flat()
-      .reverse() // Reverse so ML is at the beginning of the array (front of stack)
+      .reverse()
   );
 
   // Cycle the top card to the back

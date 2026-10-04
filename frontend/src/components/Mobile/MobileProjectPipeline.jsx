@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { projects } from "../../data/portfolio";
 
 export default function MobileProjectPipeline({ onOpenModal }) {
-  const projectOrder = ["Cloud & DevOps", "AI & Machine Learning", "Web Development"];
+  const projectOrder = ["Full Stack & Mobile", "Cloud & DevOps"];
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({

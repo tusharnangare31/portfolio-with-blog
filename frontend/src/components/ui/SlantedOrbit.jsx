@@ -83,9 +83,10 @@ const SlantedOrbit = () => {
           ))}
 
           {/* Floating Chips - Positioned to be clearly visible */}
-          <FloatingChip angle={20} distance={180} name="Tushar Nangare" role="Joined 2022" provider="PES Modern College" />
-          <FloatingChip angle={140} distance={200} name="Docker Certified" role="Training Course" provider="KodeKloud" />
-          <FloatingChip angle={210} distance={250} name="Python Essentials" role="Certified" provider="Cisco" />
+          <FloatingChip angle={20} distance={180} name="Tushar Nangare" role="BE – IT (2026)" provider="PES Modern College" />
+          <FloatingChip angle={110} distance={210} name="Docker & K8s" role="Certified" provider="KodeKloud" />
+          <FloatingChip angle={200} distance={240} name="Python Full Stack" role="Certified" provider="AICTE" />
+          <FloatingChip angle={290} distance={220} name="AI/DS Virtual Intern" role="Springboard 6.0" provider="Infosys" />
         </div>
       </div>
 

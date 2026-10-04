@@ -67,9 +67,8 @@ const Showcase = ({ onOpenModal }) => {
         <span className="text-[10px] font-bold text-muted uppercase tracking-[0.3em] whitespace-nowrap">Explore Tracks:</span>
         <div className="flex items-center gap-8">
           {[
-            { name: "Web Dev", id: "web-development" },
-            { name: "ML / AI", id: "machine-learning" },
-            { name: "Data Viz", id: "data-visualization" }
+            { name: "Full Stack & Mobile", id: "full-stack-mobile" },
+            { name: "Cloud & DevOps", id: "cloud-devops" },
           ].map((cat) => (
             <a 
               key={cat.id} 

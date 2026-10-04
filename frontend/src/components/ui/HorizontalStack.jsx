@@ -4,7 +4,7 @@ import { projects } from '../../data/portfolio';
 import { Github, ArrowRight } from 'lucide-react';
 
 const HorizontalStack = ({ onOpenModal }) => {
-  const categoryOrder = ["Data Visualization", "Web Development", "Machine Learning"];
+  const categoryOrder = ["Full Stack & Mobile", "Cloud & DevOps"];
   const allProjects = categoryOrder
     .map(cat => projects[cat])
     .filter(Boolean)

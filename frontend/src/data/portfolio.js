@@ -1,10 +1,10 @@
 export const personalInfo = {
   name: "Tushar Nangare",
-  role: "Aspiring DevOps Engineer",
+  role: "Python Full Stack Developer",
   tagline:
-    "I don't just deploy code — I build resilient, automated infrastructure.",
+    "Building and shipping full-stack applications end to end — from React/Next.js to cloud-native deployments.",
   about:
-    "Final-year Information Technology student with hands-on experience in Linux, Shell Scripting, Git, GitHub, Docker, and AWS. Passionate about DevOps, cloud infrastructure, automation, and containerized application deployment. Experienced in deploying applications on AWS using Docker and currently expanding expertise in Kubernetes and CI/CD practices through practical projects and continuous learning.",
+    "Information Technology graduate (2026) building and shipping full-stack applications end to end — React/React Native and Next.js front-ends with Supabase/PostgreSQL back-ends, containerized and deployed through automated CI/CD pipelines. Solid base in Data Structures, Algorithms, and OOP from consistent LeetCode practice, plus cloud infrastructure and DevOps experience taking applications reliably into production.",
   email: "tusharnangare311003@gmail.com",
   phone: "+91-7499404445",
   x: "https://x.com/",
@@ -17,173 +17,180 @@ export const personalInfo = {
 };
 
 export const skills = {
-  "Programming & Scripting": ["Python", "Bash", "Shell Scripting", "Java"],
-  "Cloud & AWS": [
-    "AWS EC2",
-    "Auto Scaling",
-    "Load Balancer",
-    "ECS",
-    "ECR",
-    "IAM",
-    "AWS WAF",
+  "Programming & Scripting": [
+    "Python",
+    "TypeScript",
+    "Shell Scripting",
+    "Bash",
   ],
-  "Containers & DevOps": [
+  "Front-End Development": [
+    "React",
+    "React Native",
+    "Next.js",
+    "Tailwind CSS",
+    "JavaScript",
+  ],
+  "Back-End & Databases": [
+    "Supabase",
+    "PostgreSQL",
+    "Python Full Stack",
+    "REST APIs",
+    "MySQL",
+  ],
+  "Application Deployment & CI/CD": [
     "Docker",
     "Kubernetes",
-    "Jenkins",
-    "CI/CD",
     "Git",
-    "GitHub",
+    "GitHub Actions (CI/CD)",
   ],
-  "Databases": [
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
-    "SQLite",
+  "Cloud & Infrastructure": [
+    "AWS EC2",
+    "AWS ECS",
+    "AWS ECR",
+    "ALB",
+    "AWS WAF",
+    "Route 53",
+    "IAM",
+    "Terraform",
+    "Ansible",
   ],
-  "OS & Concepts": [
-    "Linux (Ubuntu)",
-    "Networking Fundamentals",
-    "Cloud Computing",
-    "Containerization",
+  "CS Fundamentals & OS": [
+    "Data Structures & Algorithms",
+    "Object-Oriented Programming (OOP)",
+    "Ubuntu",
+    "RedHat Linux",
   ],
 };
 
 export const projects = {
-  "Cloud & DevOps": [
+  "Full Stack & Mobile": [
     {
       id: 1,
-      title: "Cloud-Native App Deployment",
+      title: "StayDirect — Hostel & PG Discovery Platform",
       date: "2026",
       description:
-        "Deployed a Dockerized web application on AWS EC2 using Launch Templates and Auto Scaling Groups with Application Load Balancer and AWS WAF security.",
+        "Mobile platform connecting students with hostel and PG owners through searchable, filterable listings and Supabase workflows.",
       longDescription:
-        "Built a production-ready cloud deployment pipeline on AWS. Deployed a Dockerized web application on EC2 using Launch Templates and Auto Scaling Groups. Configured Application Load Balancer (ALB) for distributing traffic efficiently and implemented CPU-based Auto Scaling policies. Secured the application with AWS WAF to protect against common web exploits.",
+        "Developed a cross-platform mobile platform connecting students with hostel and PG owners through searchable and filterable listings. Implemented role-based authentication for students and hostel owners, with dedicated dashboards and profile management. Designed hostel listing, room details, amenities, pricing, availability, and enquiry workflows using Supabase backend services and PostgreSQL.",
+      tech: [
+        "React Native",
+        "Supabase",
+        "PostgreSQL",
+        "TypeScript",
+      ],
+      github: "https://github.com/tusharnangare31",
+      live: "#",
+      image: "/TrustTrade.png",
+      problem:
+        "Students need a reliable, seamless mobile experience to discover verified hostels and PGs with transparent pricing and direct owner enquiries.",
+      approach:
+        "Built a cross-platform mobile app using React Native, backed by Supabase for real-time data streaming, authentication, and PostgreSQL storage.",
+      features: [
+        "Searchable & Filterable Hostel/PG Listings",
+        "Role-based Student & Owner Authentication",
+        "Dedicated Dashboards & Profile Management",
+        "Room Details, Amenities, Pricing & Enquiry Workflows",
+      ],
+      learnings:
+        "Mastered mobile state management with React Native and TypeScript, real-time database architecture with Supabase, and PostgreSQL relations.",
+      icon: "📱",
+    },
+    {
+      id: 2,
+      title: "Solar Business Website",
+      date: "2026",
+      description:
+        "Responsive business website for showcasing solar products and clean energy services with a modern, conversion-focused UI.",
+      longDescription:
+        "Developed a responsive business website for showcasing solar products and services with a modern, conversion-focused UI. Built reusable components for hero sections, product/service cards, business information, and contact sections, optimized across devices with Next.js and Tailwind CSS.",
+      tech: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+      ],
+      github: "https://github.com/tusharnangare31",
+      live: "#",
+      image: "/CliQ.png",
+      problem:
+        "Solar and clean energy businesses require an engaging, high-speed website that effectively converts visitor traffic into qualified customer inquiries.",
+      approach:
+        "Leveraged Next.js for server-rendered speed and SEO, along with Tailwind CSS for a custom, modern, device-responsive design system.",
+      features: [
+        "Modern, High-Conversion User Interface",
+        "Modular Hero & Product/Service Showcase Cards",
+        "Lead Inquiries & Interactive Contact Workflows",
+        "Mobile-First Responsive Layout & SEO Optimization",
+      ],
+      learnings:
+        "Deepened understanding of Next.js performance optimizations, component reusability, and conversion-driven front-end design.",
+      icon: "☀️",
+    },
+  ],
+  "Cloud & DevOps": [
+    {
+      id: 3,
+      title: "DevBoard — Full Stack Progress Tracker",
+      date: "2026",
+      description:
+        "Full-stack progress-tracking app with kanban-board workflows, Docker containerization, and automated CI/CD deployment pipelines.",
+      longDescription:
+        "Built a full-stack progress-tracking application with kanban-board style workflow features, covering both front-end and back-end services. Containerized the front-end and back-end services with Dockerfiles and automated the complete development and deployment pipeline using GitHub Actions, Terraform, and Ansible.",
+      tech: [
+        "Docker",
+        "GitHub Actions",
+        "Terraform",
+        "Kubernetes",
+        "Ansible",
+      ],
+      github: "https://github.com/tusharnangare31",
+      live: "#",
+      image: "/Analytica.png",
+      problem:
+        "Teams need an integrated progress tracking workflow with predictable, reproducible, and automated infrastructure deployments.",
+      approach:
+        "Developed a multi-tier containerized stack orchestrated with Docker and Kubernetes, backed by automated GitHub Actions CI/CD and Terraform IaC.",
+      features: [
+        "Kanban-Style Task & Progress Management",
+        "Multi-Container Docker Architecture",
+        "Automated GitHub Actions CI/CD Pipeline",
+        "Infrastructure as Code with Terraform & Ansible",
+      ],
+      learnings:
+        "Gained deep hands-on expertise in end-to-end DevOps workflows, container orchestration, and declarative infrastructure automation.",
+      icon: "📋",
+    },
+    {
+      id: 4,
+      title: "Cloud-Native Application Deployment",
+      date: "2026",
+      description:
+        "Deployed a Dockerized web application on AWS EC2 using Launch Templates, Auto Scaling Groups, ALB, and AWS WAF.",
+      longDescription:
+        "Deployed a Dockerized web application on AWS EC2 using Launch Templates and Auto Scaling Groups, backed by an Application Load Balancer (ALB) for traffic distribution and CPU-based scaling, secured with AWS WAF.",
       tech: [
         "AWS EC2",
         "Docker",
         "Auto Scaling",
         "ALB",
         "AWS WAF",
-        "Launch Templates",
       ],
       github: "https://github.com/tusharnangare31",
       live: "#",
-      image: "/cloud-native.png",
+      image: "/RiskLens.png",
       problem:
-        "Need for a scalable, secure cloud deployment pipeline that handles traffic spikes and protects against web threats.",
+        "Handling dynamic web traffic surges with high availability, self-healing server infrastructure, and web exploit protection.",
       approach:
-        "Used AWS Auto Scaling with CPU-based policies and ALB for traffic distribution. Secured with WAF rules.",
+        "Architected scalable AWS infrastructure with Auto Scaling Groups, Launch Templates, ALB health checks, and AWS WAF rule sets.",
       features: [
-        "Docker Containerization",
-        "Auto Scaling Groups",
-        "Application Load Balancer",
-        "AWS WAF Security",
+        "Dockerized Web App on AWS EC2",
+        "CPU-Based Auto Scaling & Launch Templates",
+        "Application Load Balancer Traffic Routing",
+        "AWS WAF Threat & Exploit Mitigation",
       ],
       learnings:
-        "Gained deep understanding of AWS infrastructure, auto scaling policies, and cloud security best practices.",
+        "Mastered AWS cloud architecture, auto scaling elasticity, traffic management, and cloud security defense in depth.",
       icon: "☁️",
-    },
-    {
-      id: 2,
-      title: "ECS Container Deployment",
-      date: "2026",
-      description:
-        "Built Docker images and deployed applications using Amazon ECS with ECR for image management and IAM for secure access control.",
-      longDescription:
-        "Implemented a full container deployment workflow on AWS ECS. Built Docker images and pushed them to Amazon Elastic Container Registry (ECR). Configured IAM roles and policies for secure container deployment. Created an ECS cluster and deployed applications using ECS tasks and services for orchestrated container management.",
-      tech: [
-        "AWS ECS",
-        "Docker",
-        "ECR",
-        "IAM",
-        "AWS EC2",
-      ],
-      github: "https://github.com/tusharnangare31",
-      live: "#",
-      image: "/ecs-deployment.png",
-      problem:
-        "Managing containerized application deployments at scale with proper security and orchestration.",
-      approach:
-        "Used ECS for container orchestration with ECR for image management and IAM for role-based access control.",
-      features: [
-        "Docker Image Management",
-        "ECR Registry",
-        "IAM Security Policies",
-        "ECS Task Orchestration",
-      ],
-      learnings:
-        "Mastered AWS container services ecosystem and security-first deployment practices.",
-      icon: "🐳",
-    },
-  ],
-  "AI & Machine Learning": [
-    {
-      id: 3,
-      title: "Brain Tumor Detection",
-      date: "2026",
-      description:
-        "Built a brain tumor detection system using deep learning for MRI image classification with LLM-based medicine recommendations.",
-      longDescription:
-        "Developed a comprehensive brain tumor detection and medicine prediction system using Generative AI. Built a CNN-based deep learning model for MRI image classification to detect brain tumors. Integrated LLM-based medicine recommendations and medical insights for actionable results. Created a web interface using Django for real-time predictions and AI-generated responses.",
-      tech: [
-        "Python",
-        "CNN",
-        "LLM",
-        "Django",
-        "Deep Learning",
-        "Generative AI",
-      ],
-      github: "https://github.com/tusharnangare31",
-      live: "#",
-      image: "/brain-tumor.png",
-      problem:
-        "Need for automated, accurate brain tumor detection from MRI scans with actionable medical insights.",
-      approach:
-        "Combined CNN for image classification with LLM for generating medicine recommendations and medical insights.",
-      features: [
-        "MRI Image Classification",
-        "LLM Medicine Prediction",
-        "Real-time Web Interface",
-        "AI-Generated Insights",
-      ],
-      learnings:
-        "Gained expertise in deep learning for medical imaging and integrating LLMs into practical applications.",
-      icon: "🧠",
-    },
-  ],
-  "Web Development": [
-    {
-      id: 4,
-      title: "Poetry Blogging Platform",
-      date: "2026",
-      description:
-        "A full-stack blogging platform allowing users to create, share, and manage poems with authentication and database integration.",
-      longDescription:
-        "Developed a poetry blogging platform using Django and PostgreSQL. Implemented user authentication, content management, and robust database integration. Users can create, edit, and share their poems with the community. Built with a clean, responsive interface focused on readability and user experience.",
-      tech: [
-        "Django",
-        "PostgreSQL",
-        "Python",
-        "HTML/CSS",
-        "Authentication",
-      ],
-      github: "https://github.com/tusharnangare31",
-      live: "#",
-      image: "/poetry-blog.png",
-      problem:
-        "Need for a dedicated platform for poets to share their work with proper content management.",
-      approach:
-        "Built a full-stack Django application with PostgreSQL backend and user authentication system.",
-      features: [
-        "User Authentication",
-        "Content Management",
-        "PostgreSQL Integration",
-        "Responsive Design",
-      ],
-      learnings:
-        "Strengthened full-stack development skills with Django and database design.",
-      icon: "📝",
     },
   ],
 };
@@ -191,121 +198,106 @@ export const projects = {
 export const education = [
   {
     college: "PES Modern College of Engineering, Pune",
-    degree: "Bachelor of Engineering (Information Technology)",
-    duration: "2022 - 2026",
-    result: "CGPA: 8.33",
-    details: "Focusing on DevOps, Cloud Computing, and Software Engineering.",
+    degree: "BE – Information Technology",
+    duration: "2022 – 2026",
+    result: "Graduate (2026)",
+    details:
+      "Information Technology degree focusing on full-stack application development, Data Structures, OOP, and Cloud/DevOps. Coordinated with the student community to organize college-fest events and presented final-year project to the department faculty and 120 students.",
   },
   {
     college: "Rahuri Education Society",
-    degree: "HSC (Class XII)",
-    duration: "2020 - 2022",
-    result: "",
-    details: "Science stream with focus on Physics, Chemistry, and Mathematics.",
+    degree: "Higher Secondary Certificate (HSC)",
+    duration: "2020 – 2022",
+    result: "Science Stream",
+    details: "Science stream with coursework in Physics, Chemistry, and Mathematics.",
   },
   {
     college: "SPVM, Rahuri",
-    degree: "SSC (Class X)",
-    duration: "2019 - 2020",
-    result: "",
-    details: "General science and mathematics foundation.",
+    degree: "Secondary School Certificate (SSC)",
+    duration: "2019 – 2020",
+    result: "Class X",
+    details: "Foundational coursework in science, mathematics, and computing fundamentals.",
   },
 ];
 
 export const miniProjects = [
   {
-    title: "Cloud-Native Deployment",
-    tech: "AWS, Docker",
+    title: "StayDirect Mobile App",
+    tech: "React Native, Supabase",
     description:
-      "Deployed Dockerized apps on AWS EC2 with Auto Scaling, ALB, and WAF security controls.",
+      "Searchable hostel & PG discovery platform with role-based auth and owner dashboards.",
     link: "https://github.com/tusharnangare31",
     active: true,
   },
   {
-    title: "ECS Container Deploy",
-    tech: "AWS ECS, ECR",
+    title: "Solar Business Platform",
+    tech: "Next.js, Tailwind CSS",
     description:
-      "Built Docker images, pushed to ECR, and orchestrated with ECS tasks and services.",
+      "High-performance website with responsive product cards, service showcases, and lead workflows.",
     link: "https://github.com/tusharnangare31",
     active: true,
   },
   {
-    title: "Brain Tumor Detector",
-    tech: "Python, CNN, LLM",
+    title: "DevBoard Progress Tracker",
+    tech: "Docker, K8s, Terraform",
     description:
-      "Deep learning MRI classification with LLM-powered medicine prediction.",
+      "Full-stack kanban tracker containerized with Docker and deployed via GitHub Actions CI/CD.",
     link: "https://github.com/tusharnangare31",
     active: true,
   },
   {
-    title: "Poetry Blog",
-    tech: "Django, PostgreSQL",
+    title: "Cloud-Native App Deployment",
+    tech: "AWS EC2, ALB, WAF",
     description:
-      "Full-stack blogging platform with authentication and content management.",
+      "Dockerized deployment with Launch Templates, Auto Scaling, ALB traffic balancing, and WAF.",
     link: "https://github.com/tusharnangare31",
     active: true,
   },
   {
-    title: "Shell Script Utils",
+    title: "CI/CD Deployment Pipeline",
+    tech: "GitHub Actions, AWS",
+    description:
+      "Automated build, test, container packaging, and AWS Route 53 DNS deployment workflows.",
+    link: "https://github.com/tusharnangare31",
+    active: true,
+  },
+  {
+    title: "LeetCode DSA Solutions",
+    tech: "Python, DSA, OOP",
+    description:
+      "Curated repository of optimized data structures, algorithms, and OOP problem solutions.",
+    link: "https://leetcode.com/u/tusharnangare/",
+    active: true,
+  },
+  {
+    title: "Ansible & Terraform IaC",
+    tech: "Terraform, Ansible",
+    description:
+      "Infrastructure-as-code configuration scripts for automated server provisioning on AWS.",
+    link: "#",
+    active: false,
+  },
+  {
+    title: "PostgreSQL Database Schema",
+    tech: "PostgreSQL, SQL",
+    description:
+      "Optimized relational schemas, indexing, and role-based access control policies.",
+    link: "#",
+    active: false,
+  },
+  {
+    title: "Shell Script Automation",
     tech: "Bash, Linux",
     description:
-      "Collection of automation scripts for server provisioning and maintenance.",
+      "Automation scripts for environment setup, container health checks, and server maintenance.",
     link: "#",
     active: false,
   },
   {
-    title: "Jenkins Pipeline",
-    tech: "Jenkins, Docker",
+    title: "AWS ECS Container Cluster",
+    tech: "AWS ECS, ECR, IAM",
     description:
-      "CI/CD pipeline for automated build, test, and deployment workflows.",
-    link: "#",
-    active: false,
-  },
-  {
-    title: "K8s Cluster Setup",
-    tech: "Kubernetes",
-    description:
-      "Local Kubernetes cluster setup with pods, deployments, and services.",
-    link: "#",
-    active: false,
-  },
-  {
-    title: "Portfolio V1",
-    tech: "HTML, CSS",
-    description:
-      "My first portfolio website built with raw HTML and CSS.",
-    link: "https://tusharnangare.netlify.app/",
-    active: true,
-  },
-  {
-    title: "MySQL Admin Tool",
-    tech: "Python, MySQL",
-    description:
-      "Database administration utility for backup, restore, and monitoring.",
-    link: "#",
-    active: false,
-  },
-  {
-    title: "Network Monitor",
-    tech: "Python, Bash",
-    description:
-      "Automated network monitoring script with alerting capabilities.",
-    link: "#",
-    active: false,
-  },
-  {
-    title: "Docker Compose Stack",
-    tech: "Docker Compose",
-    description:
-      "Multi-service application stack with web server, database, and cache.",
-    link: "#",
-    active: false,
-  },
-  {
-    title: "Git Hooks Toolkit",
-    tech: "Bash, Git",
-    description:
-      "Custom Git hooks for code quality, linting, and commit message validation.",
+      "Container orchestration with ECR image registry and IAM role-based access controls.",
     link: "#",
     active: false,
   },
@@ -313,43 +305,19 @@ export const miniProjects = [
 
 export const achievements = [
   {
-    name: "Infosys Springboard Virtual Internship 6.0",
-    date: "2025",
-    provider: "Infosys",
+    name: "Brandspark Technology Internship",
+    date: "April 2026",
+    provider: "Brandspark Technology",
     details:
-      "Selected for the AI/DS virtual internship. Worked on machine learning workflows involving data preprocessing, training, and deployment with cloud-based AI/DS projects.",
+      "Built Docker containers and automated complete application workflows using GitHub Actions CI/CD, deploying to AWS and managing DNS with Route 53.",
     link: "#",
   },
   {
-    name: "Docker Training Course for the Absolute Beginner",
-    date: "2025",
-    provider: "KodeKloud",
+    name: "Infosys Springboard Virtual Internship 6.0 (AI/DS)",
+    date: "August 2025",
+    provider: "Infosys Springboard",
     details:
-      "Comprehensive Docker training covering containerization fundamentals, Dockerfile creation, Docker networking, and container orchestration basics.",
-    link: "#",
-  },
-  {
-    name: "Kubernetes for the Absolute Beginners",
-    date: "2025",
-    provider: "KodeKloud",
-    details:
-      "Kubernetes fundamentals including pods, deployments, services, and basic cluster management.",
-    link: "#",
-  },
-  {
-    name: "Python Essentials I & II",
-    date: "2025",
-    provider: "Cisco (Python Institute)",
-    details:
-      "Comprehensive Python programming certification covering core concepts, data structures, OOP, and advanced Python features.",
-    link: "#",
-  },
-  {
-    name: "AI/ML Virtual Internship",
-    date: "2025",
-    provider: "Google Developers",
-    details:
-      "Hands-on experience with machine learning models, training workflows, and AI application development.",
+      "Selected for the competitive AI/DS virtual internship program. Worked on machine learning workflows covering data preprocessing, model training, and deployment on cloud-based AI/DS projects.",
     link: "#",
   },
   {
@@ -357,7 +325,47 @@ export const achievements = [
     date: "2025",
     provider: "AICTE Internship",
     details:
-      "Full-stack development training with Python, Django, databases, and web application deployment.",
+      "Comprehensive full-stack development program covering Python, database architecture, backend APIs, and web application deployment.",
+    link: "#",
+  },
+  {
+    name: "Python Essentials I & II",
+    date: "2025",
+    provider: "Cisco (Python Institute)",
+    details:
+      "In-depth Python programming certification validating core proficiency, Data Structures, OOP principles, and scripting capabilities.",
+    link: "#",
+  },
+  {
+    name: "Docker Training for Beginners",
+    date: "2025",
+    provider: "KodeKloud",
+    details:
+      "Hands-on Docker training covering containerization fundamentals, Dockerfiles, multi-stage builds, and container networking.",
+    link: "#",
+  },
+  {
+    name: "Kubernetes for the Absolute Beginners",
+    date: "2025",
+    provider: "KodeKloud",
+    details:
+      "Kubernetes fundamentals including Pods, Deployments, Services, ConfigMaps, and cluster orchestration concepts.",
+    link: "#",
+  },
+  {
+    name: "AI/ML Virtual Internship",
+    date: "2025",
+    provider: "Google Developers",
+    details:
+      "Machine learning models, dataset preprocessing, training pipelines, and intelligent application development.",
+    link: "#",
+  },
+  {
+    name: "Data Science Fundamentals",
+    date: "2025",
+    provider: "Scaler Topics",
+    details:
+      "Exploratory data analysis, statistical methods, Python data tooling, and algorithm design fundamentals.",
     link: "#",
   },
 ];

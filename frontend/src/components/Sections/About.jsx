@@ -123,7 +123,7 @@ const About = () => {
                   {personalInfo.about}
                 </p>
                 <p className="text-sm md:text-base leading-relaxed text-muted-foreground/60 max-w-lg transition-colors duration-500">
-                  Currently specializing in DevOps & Cloud Computing at PES Modern College of Engineering, focusing on containerization, CI/CD, and cloud infrastructure.
+                  Information Technology graduate (2026) from PES Modern College of Engineering, Pune — focused on full-stack web & mobile development, automated CI/CD pipelines, and cloud deployments.
                 </p>
               </div>
             </div>
